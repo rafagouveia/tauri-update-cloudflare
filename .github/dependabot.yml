@@ -11,9 +11,9 @@ updates:
       interval: "weekly"
     groups:
       production-dependencies:
-        dependency-types: "production"
+        dependency-type: "production"
       development-dependencies:
-        dependency-types: "development"
+        dependency-type: "development"
     labels:
       - "npm"
       - "dependencies"
