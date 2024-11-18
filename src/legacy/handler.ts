@@ -5,7 +5,6 @@ import { TauriUpdateResponse } from '../types';
 import { sanitizeVersion, semverGt, semverValid } from '../utils/versioning';
 
 import { Env } from '../../worker-configuration';
-import { Request } from '@cloudflare/workers-types';
 
 export async function handleLegacyRequest(
     request: Request,

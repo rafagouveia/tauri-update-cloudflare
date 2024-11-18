@@ -1,5 +1,4 @@
 import { Env } from '../../worker-configuration';
-import { Request, Response } from '@cloudflare/workers-types';
 
 export type Asset = {
     name: string;
@@ -33,7 +32,6 @@ export async function getReleases(
         headers.set('Authorization', `token ${env.GITHUB_API_TOKEN}`);
     }
 
-    // @ts-expect-error - Fetch does not have the webSocket property
     return await fetch(
         `https://api.github.com/repos/${env.GITHUB_ACCOUNT}/${env.GITHUB_REPO}/releases/latest`,
         {

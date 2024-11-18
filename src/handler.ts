@@ -7,7 +7,6 @@ import { findAssetSignature, getLatestRelease } from './services/github';
 import { TauriUpdateResponse } from './types';
 import { sanitizeVersion } from './utils/versioning';
 
-import { Request, ExecutionContext } from '@cloudflare/workers-types';
 import { WritableStream as WebWritableStream } from 'node:stream/web';
 import { Env } from '../worker-configuration';
 
@@ -133,7 +132,6 @@ const getLatestAssets = async (
     throw new Error('Could not get file body from download URL');
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function handleRequest(
     request: Request,
     env: Env,
