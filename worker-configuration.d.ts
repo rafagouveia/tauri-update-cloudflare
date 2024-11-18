@@ -2,7 +2,7 @@
 // by running `wrangler types`
 
 export interface Env {
-	GITHUB_ACCOUNT: string;
-	GITHUB_REPO: string;
-	GITHUB_API_TOKEN?: string;
+    GITHUB_ACCOUNT: string;
+    GITHUB_REPO: string;
+    GITHUB_API_TOKEN?: string;
 }

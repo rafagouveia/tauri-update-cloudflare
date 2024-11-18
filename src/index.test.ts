@@ -19,6 +19,7 @@ describe('handle GET', () => {
             GITHUB_ACCOUNT: 'killeencode',
             GITHUB_REPO: 'brancato'
         };
+        // @ts-expect-error
         const response = await worker.fetch(request, env, ctx);
         // Wait for all `Promise`s passed to `ctx.waitUntil()` to settle before running test assertions
         await waitOnExecutionContext(ctx);

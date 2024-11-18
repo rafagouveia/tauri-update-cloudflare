@@ -7,7 +7,8 @@
         "dev": "wrangler dev",
         "deploy": "wrangler deploy",
         "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}'",
-        "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}'",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
         "test": "vitest"
     },
     "author": "author",
@@ -20,18 +21,20 @@
         ]
     },
     "devDependencies": {
-        "@cloudflare/vitest-pool-workers": "^0.5.24",
+        "@cloudflare/vitest-pool-workers": "^0.5.28",
         "@cloudflare/workers-types": "^4.20240821.1",
+        "@stylistic/eslint-plugin-ts": "^2.10.1",
         "@types/semver": "^7.5.8",
-        "@typescript-eslint/eslint-plugin": "^8.12.2",
-        "@typescript-eslint/parser": "^8.13.0",
-        "eslint": "^8.56.0",
+        "@typescript-eslint/eslint-plugin": "^8.14.0",
+        "@typescript-eslint/parser": "^8.14.0",
+        "eslint": "^9.15.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-config-typescript": "^3.0.0",
+        "eslint-plugin-prettier": "^5.2.1",
         "prettier": "^3.3.3",
         "ts-loader": "^9.5.1",
-        "typescript": "^5.5.4",
-        "vitest": "2.1.4",
+        "typescript": "^5.6.3",
+        "vitest": "2.1.5",
         "wrangler": "^3.58.0"
     },
     "dependencies": {
